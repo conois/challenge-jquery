@@ -18,6 +18,10 @@ $(document).ready( function(){
 */
 function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
+	for ( i in recipesArray)
+		if (recipesArray[i].highlighted) {
+			renderRecipe(recipesArray[i].highlighted)
+		}
 }
 
 /*
