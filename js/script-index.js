@@ -1,14 +1,11 @@
 $(document).ready( function(){
-
 	//funcion para esconder flecha
 	ocultarFlecha(); 
 	//Funcion para escribir NUEVA RECETA 
 	printNews();
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
-
 	renderActivities(activities); 
-
 	renderActivity(activities); 
 });
 
