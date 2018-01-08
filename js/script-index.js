@@ -1,7 +1,8 @@
 $(document).ready( function(){
 
-	//funcion para esconder elementos 
-	ocultarElementos(); 
+	//funcion para esconder flecha
+	ocultarFlecha(); 
+	printNews();
 
 
 
@@ -48,9 +49,12 @@ function renderActivity(recipe) {
 }
 
 /*Funcion para ocultar flecha*/
-function ocultarElementos(){
+function ocultarFlecha(){
 	$("#js-back-index").hide(); 
-	$("#js-menu-recipe").hide();
 } 
+
+function printNews(){
+	$(".callout-news p").html("NUEVAS RECETAS"); 
+}
 
 
