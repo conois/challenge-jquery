@@ -2,12 +2,12 @@ $(document).ready( function(){
 
 	//funcion para esconder flecha
 	ocultarFlecha(); 
+	//Funcion para escribir NUEVA RECETA 
 	printNews();
-
-
-
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
+
+	renderActivities(activities); 
 
 });
 
@@ -53,8 +53,11 @@ function renderRecipe(recipe) {
 /*
 * Función que se encarga de pintar todas las actividades
 */
-function renderActivities(activitiesArray) {
-	console.log('Activities: ', activitiesArray);
+function renderActivities(activities) {
+	console.log('Activities: ', activities);
+	if(activities.length > 0){
+		$(".wrapper-message").hide(); 
+	}
 }
 
 /*
