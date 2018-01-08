@@ -1,5 +1,10 @@
 $(document).ready( function(){
 
+	//funcion para esconder elementos 
+	ocultarElementos(); 
+
+
+
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
@@ -41,5 +46,11 @@ function renderActivities(activitiesArray) {
 function renderActivity(recipe) {
 	
 }
+
+/*Funcion para ocultar flecha*/
+function ocultarElementos(){
+	$("#js-back-index").hide(); 
+	$("#js-menu-recipe").hide();
+} 
 
 
