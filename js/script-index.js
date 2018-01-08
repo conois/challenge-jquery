@@ -9,6 +9,7 @@ $(document).ready( function(){
 
 	renderActivities(activities); 
 
+	renderActivity(activities); 
 });
 
 
@@ -65,9 +66,30 @@ function renderActivities(activities) {
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
 */
-function renderActivity(recipe) {
-	
+function renderActivity(activities) {
+	console.log("hola")
+		$(".list-activities").append(
+			'<a href="#" class="item-activity">'+
+
+			  '<span class="attribution">'+
+			  
+			    '<span class="avatar">'+
+			      '<img src="' + activities[0].userAvatar + '" class="image-avatar">'+
+			    '</span>'+
+			      
+			    '<span class="meta">'+
+			      '<span class="author"> '+ activities[0].userName +'</span> made '+
+			      '<span class="recipe"> '+ activities[0].recipeName +'</span>' + activities[0].text +
+			      '<span class="location">-'+ activities[0].place +'</span>'+
+			    '</span>'+
+			  
+			  '</span>'+
+
+			  '<div class="bg-image" style="background-image: url(' + activities[0].image +');"></div>'+
+
+			'</a>')
 }
+	
 
 /*Funcion para ocultar flecha*/
 function ocultarFlecha(){
